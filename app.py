@@ -24,12 +24,11 @@ def download_video():
     output_template = os.path.join(DOWNLOAD_FOLDER, f"{video_id}.%(ext)s")
 
     ytdlp_cmd = [
-        "yt-dlp",
-        "-f", "bestvideo[ext=mp4]+bestaudio/best",
-        "-o", output_template,
-        url
+    "yt-dlp",
+    "--merge-output-format", "mp4",
+    "-o", output_template,
+    url
     ]
-
     try:
         subprocess.run(ytdlp_cmd, check=True)
         for f in os.listdir(DOWNLOAD_FOLDER):
