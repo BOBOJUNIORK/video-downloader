@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Téléchargeur de Vidéos - Réseaux Sociaux</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1 class="title">📹 Téléchargeur de Vidéos</h1>
+      <p class="subtitle">Téléchargez des vidéos depuis YouTube, Facebook, Twitter, TikTok et plus encore</p>
+      
+      <div class="download-form">
+        <div class="input-group">
+          <input 
+            type="url" 
+            id="videoUrl" 
+            placeholder="Collez l'URL de la vidéo ici..." 
+            class="url-input"
+            required
+          >
+          <button id="downloadBtn" class="download-btn">
+            <span id="btnText">Télécharger</span>
+            <div id="loader" class="loader hidden"></div>
+          </button>
+        </div>
+        
+        <div class="platform-selector">
+          <label>Plateforme détectée:</label>
+          <span id="detectedPlatform" class="platform-badge">Aucune</span>
+        </div>
+      </div>
+
+      <div id="result" class="result hidden"></div>
+
+      <!-- Section de format et qualité -->
+      <div class="format-options">
+        <h3>Options de téléchargement</h3>
+        <div class="options-grid">
+          <div class="option-group">
+            <label for="formatSelect">Format:</label>
+            <select id="formatSelect" class="format-select">
+              <option value="mp4">MP4 (Recommandé)</option>
+              <option value="avi">AVI</option>
+              <option value="mov">MOV</option>
+              <option value="mkv">MKV</option>
+              <option value="mp3">MP3 (Audio seulement)</option>
+              <option value="wav">WAV (Audio seulement)</option>
+            </select>
+          </div>
+          <div class="option-group">
+            <label for="qualitySelect">Qualité:</label>
+            <select id="qualitySelect" class="quality-select">
+              <option value="1080p">1080p HD</option>
+              <option value="720p">720p HD</option>
+              <option value="480p">480p</option>
+              <option value="360p">360p</option>
+              <option value="240p">240p</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Historique de téléchargement -->
+      <div class="download-history">
+        <h3>Historique de téléchargement</h3>
+        <div class="history-controls">
+          <button id="clearHistoryBtn" class="clear-history-btn">Effacer l'historique</button>
+          <span id="historyCount" class="history-count">0 téléchargements</span>
+        </div>
+        <div id="historyList" class="history-list">
+          <p class="no-history">Aucun téléchargement pour le moment</p>
+        </div>
+      </div>
+      
+      <div class="supported-platforms">
+        <h3>Plateformes supportées</h3>
+        <div class="platforms-grid">
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" class="platform-icon-img">
+            <span>YouTube</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" class="platform-icon-img">
+            <span>Facebook</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter" class="platform-icon-img">
+            <span>Twitter</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/tiktok.png" alt="TikTok" class="platform-icon-img">
+            <span>TikTok</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/pinterest--v1.png" alt="Pinterest" class="platform-icon-img">
+            <span>Pinterest</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" class="platform-icon-img">
+            <span>Instagram</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/snapchat.png" alt="Snapchat" class="platform-icon-img">
+            <span>Snapchat</span>
+          </div>
+          <div class="platform-item">
+            <img src="https://img.icons8.com/color/48/vimeo.png" alt="Vimeo" class="platform-icon-img">
+            <span>Vimeo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <h3>Fonctionnalités</h3>
+        <ul>
+          <li>✅ Téléchargement gratuit et illimité</li>
+          <li>✅ Support de multiples formats (MP4, AVI, MOV)</li>
+          <li>✅ Qualité HD disponible</li>
+          <li>✅ Pas d'inscription requise</li>
+          <li>✅ Compatible mobile et desktop</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
