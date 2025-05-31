@@ -34,7 +34,7 @@ def download_video():
     if not any(domain in url for domain in ["youtube.com", "youtu.be", "twitter.com", "x.com"]):
         return jsonify({
             "success": False,
-            "error": "Plateforme non supportÃ©e dans cette version gratuite."
+            "error": "Plateforme non supportée dans cette version gratuite."
         }), 400
 
     ytdlp_cmd = [
